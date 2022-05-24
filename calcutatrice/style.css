@@ -1,0 +1,39 @@
+.calculatrice{
+    display: grid;
+    width: 300px;
+    margin: 0 auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50px repeat(5, 30px);
+    grid-template-areas: 
+    "res res res res"
+    "9 8 7 reset"
+    "6 5 4 reset"
+    "3 2 1 reset"
+    "0 dot plus minus"
+    "equal equal time div"
+    ;
+    border: 10px solid cyan;
+}
+h3{
+    grid-area: res;
+    font-size: 2em;
+    margin:7px 10px 0 0;
+    text-align: right;
+}
+button{
+    background-color: cyan;
+    border: 1px dotted ;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover{
+    background-color: rgb(149, 202, 202);
+}
+#clear{
+    grid-area: reset;
+}
+#equal{
+    grid-area: equal;
+
+}
